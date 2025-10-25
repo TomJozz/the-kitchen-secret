@@ -71,11 +71,6 @@ public class KeypadDecoder {
     public static void main(String[] args) {
         try {
             String fileContent = DatasetReader.readFromResource("hyperskill-dataset.txt");
-//            String input = """
-//            DOWN,LEFT,RIGHT,UP,UP,RIGHT
-//            DOWN,DOWN,RIGHT,RIGHT,UP
-//            """;
-
             System.out.println("Decoded: " + decodeSequence(fileContent));
 
         } catch (IOException e) {
