@@ -16,7 +16,7 @@ I J K L
 M N O P
 ```
 
-You took a folded paper taped to the corner of the keypad. It was a note with instructions.
+You took a folded paper taped to the corner of the keypad. It was a note with [instructions](src/main/resources/hyperskill-dataset.txt).
 
 Apparently, whoever put this wall here wanted you to input an extremely long sequence on the keypad. 
 But instead of giving you the code right away, they wrote down all movements of the finger you need to make in order to get to the proper button. 
