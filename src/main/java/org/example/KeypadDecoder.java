@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.IOException;
 import java.util.*;
 
 public class KeypadDecoder {
@@ -68,11 +69,17 @@ public class KeypadDecoder {
     }
 
     public static void main(String[] args) {
-        String input = """
-            DOWN,LEFT,RIGHT,UP,UP,RIGHT
-            DOWN,DOWN,RIGHT,RIGHT,UP
-            """;
+        try {
+            String fileContent = DatasetReader.readFromResource("hyperskill-dataset.txt");
+//            String input = """
+//            DOWN,LEFT,RIGHT,UP,UP,RIGHT
+//            DOWN,DOWN,RIGHT,RIGHT,UP
+//            """;
 
-        System.out.println("Decoded: " + decodeSequence(input));
+            System.out.println("Decoded: " + decodeSequence(fileContent));
+
+        } catch (IOException e) {
+            System.err.println("Reading file failed: " + e.getMessage());
+        }
     }
 }
